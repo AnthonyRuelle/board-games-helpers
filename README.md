@@ -1,34 +1,24 @@
-# board-games-helpers
+# board-games-helper
 
-## Project setup
-```
-npm install
-```
+## TODO list
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Icone app
+- PWA
+- Lib UI
+- Header style
+- 7 wonders architect assets
+- 7 wonders architect style
+- Generic pages (list)
+- Colt express
+- Chakra
+- Other games ...?
+- Write component VUE 3
+- TU
+- Cypress ? :)
+- Google analytics
+- Contact / demande évol / bug ?
+- I18n
+- Tri par ordre alphabétique
+- Collect data
+- 404 not found
+- add depandabot
