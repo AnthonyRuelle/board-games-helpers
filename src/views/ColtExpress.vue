@@ -3,7 +3,7 @@
   <template v-if="!isAvailableResult">
     <label for="number-player-select">Nombre de joueurs: </label>
     <select v-model="numberOfPlayer" id="number-player-select">
-      <option v-for="n in 6" :key="n" :value="n + 1">
+      <option v-for="n in 5" :key="n" :value="n + 1">
         {{ n + 1 }}
       </option>
     </select>

@@ -22,6 +22,12 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "ColtExpress" */ '../views/ColtExpress.vue'),
   },
   {
+    path: '/chakra',
+    name: 'Chakra',
+    component: () =>
+      import(/* webpackChunkName: "Chakra" */ '../views/Chakra.vue'),
+  },
+  {
     path: '/contact',
     name: 'Contact',
     component: () =>
