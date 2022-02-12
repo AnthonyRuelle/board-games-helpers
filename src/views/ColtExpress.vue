@@ -30,37 +30,45 @@
   </template>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+export interface AffectedCharacters {
+  playerName: string;
+  character: string;
+}
+
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'ColtExpress',
   data() {
     return {
       numberOfPlayer: 2,
-      playerNames: [],
+      playerNames: [] as Array<string>,
       charactersNames: ['Ghost', 'Cheyenne', 'Django', 'Belle', 'Tuco', 'Doc'],
-      affectedCharacters: [],
+      affectedCharacters: [] as Array<AffectedCharacters>,
     };
   },
   computed: {
-    isValidForm() {
+    isValidForm(): boolean {
       return (
         this.playerNames.length === this.numberOfPlayer &&
         this.playerNames.every(
-          (playerName) => playerName?.trim()?.length > 0 && playerName !== null,
+          (playerName: string) =>
+            playerName?.trim()?.length > 0 && playerName !== null,
         )
       );
     },
-    isAvailableResult() {
+    isAvailableResult(): boolean {
       return this.affectedCharacters.length > 0;
     },
   },
   methods: {
-    affectCharacters() {
+    affectCharacters(): void {
       this.resetAffectedCharacters();
       const charactersNamesCopied = [...this.charactersNames];
-      this.playerNames.forEach((playerName) => {
+      this.playerNames.forEach((playerName: string) => {
         const idx = Math.floor(Math.random() * charactersNamesCopied.length);
-        const character = charactersNamesCopied[idx];
+        const character: string = charactersNamesCopied[idx];
         this.affectedCharacters.push({
           playerName,
           character,
@@ -68,10 +76,9 @@ export default {
         charactersNamesCopied.splice(idx, 1);
       });
     },
-    resetAffectedCharacters() {
+    resetAffectedCharacters(): void {
       this.affectedCharacters = [];
     },
   },
-};
+});
 </script>
-<style></style>

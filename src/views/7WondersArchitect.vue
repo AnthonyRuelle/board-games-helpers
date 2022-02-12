@@ -29,13 +29,20 @@
   </template>
 </template>
 
-<script>
-export default {
-  name: '7WondersArchited',
+<script lang="ts">
+export interface AffectedWonders {
+  playerName: string;
+  wonder: string;
+}
+
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: '7WondersArchitect',
   data() {
     return {
       numberOfPlayer: 2,
-      playerNames: [],
+      playerNames: [] as Array<string>,
       wondersNames: [
         'Babylone',
         'Gizeh',
@@ -45,11 +52,11 @@ export default {
         'Halicarnasse',
         'Ephése',
       ],
-      affectedWonders: [],
+      affectedWonders: [] as Array<AffectedWonders>,
     };
   },
   computed: {
-    isValidForm() {
+    isValidForm(): boolean {
       return (
         this.playerNames.length === this.numberOfPlayer &&
         this.playerNames.every(
@@ -57,17 +64,17 @@ export default {
         )
       );
     },
-    isAvailableResult() {
+    isAvailableResult(): boolean {
       return this.affectedWonders.length > 0;
     },
   },
   methods: {
-    affectWonders() {
+    affectWonders(): void {
       this.resetAffectedWonders();
       const wondersNamesCopied = [...this.wondersNames];
       this.playerNames.forEach((playerName) => {
         const idx = Math.floor(Math.random() * wondersNamesCopied.length);
-        const wonder = wondersNamesCopied[idx];
+        const wonder: string = wondersNamesCopied[idx];
         this.affectedWonders.push({
           playerName,
           wonder,
@@ -75,10 +82,9 @@ export default {
         wondersNamesCopied.splice(idx, 1);
       });
     },
-    resetAffectedWonders() {
+    resetAffectedWonders(): void {
       this.affectedWonders = [];
     },
   },
-};
+});
 </script>
-<style></style>

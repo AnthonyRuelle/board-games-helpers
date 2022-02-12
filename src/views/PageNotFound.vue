@@ -2,9 +2,10 @@
   <h1>Page not found</h1>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'PageNotFound',
-};
+});
 </script>
-<style></style>

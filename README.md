@@ -6,10 +6,9 @@
 - PWA configs
 - Lib UI
 - Header style
-- 7 wonders architect assets
-- 7 wonders architect style
+- Add assets + page style
 - Generic pages (list)
-- Colt express
+- Colt express (add extensions)
 - Chakra
 - Other games ...?
 - Write component VUE 3
