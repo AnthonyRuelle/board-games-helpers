@@ -3,7 +3,7 @@
 ## TODO list
 
 - Icone app
-- PWA
+- PWA configs
 - Lib UI
 - Header style
 - 7 wonders architect assets
@@ -20,5 +20,5 @@
 - I18n
 - Tri par ordre alphabétique
 - Collect data
-- 404 not found
+- 404 not found page style
 - add depandabot

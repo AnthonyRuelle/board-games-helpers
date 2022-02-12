@@ -11,19 +11,29 @@ const routes: Array<RouteRecordRaw> = [
     path: '/7-wonders-architect',
     name: '7WondersArchitect',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/7WondersArchitect.vue'),
+      import(
+        /* webpackChunkName: "7WondersArchitect" */ '../views/7WondersArchitect.vue'
+      ),
   },
   {
     path: '/colt-express',
     name: 'ColtExpress',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/ColtExpress.vue'),
+      import(/* webpackChunkName: "ColtExpress" */ '../views/ColtExpress.vue'),
   },
   {
     path: '/contact',
     name: 'Contact',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Contact.vue'),
+      import(/* webpackChunkName: "Contact" */ '../views/Contact.vue'),
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'PageNotFound',
+    component: () =>
+      import(
+        /* webpackChunkName: "PageNotFound" */ '../views/PageNotFound.vue'
+      ),
   },
 ];
 
