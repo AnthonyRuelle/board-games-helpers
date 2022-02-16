@@ -19,6 +19,6 @@ html * {
 
 header {
   height: 30px;
-  background-color: $color-test;
+  background-color: cyan;
 }
 </style>
