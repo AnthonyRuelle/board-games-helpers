@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="page home">
     <div class="games">
       <GameCard
         v-for="game in boardGameInfos"
@@ -52,22 +52,22 @@ export default defineComponent({
       router.push({ path });
     },
   },
-  // mounted() {
-  //   fetch('../boardGamesInfos.json')
-  //     .then((response) => response.json())
-  //     .then((json) => console.log(json));
-  // },
 });
 </script>
 
 <style lang="scss">
-.games {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+.home {
+  .games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    background: $color-white;
+    height: 100%;
 
-  .game-card {
-    margin: $spacer;
+    .game-card {
+      margin: $spacer;
+    }
   }
 }
 </style>

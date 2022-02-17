@@ -33,9 +33,15 @@ export default defineComponent({
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 220px;
-  height: 270px;
+  width: 145px;
+  height: 160px;
   border: 1px solid transparent;
+  font-size: 12px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 220px;
+    height: 270px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -43,8 +49,28 @@ export default defineComponent({
   }
 
   .board-game-image {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .p-card-body {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 0;
+  }
+
+  .p-card-content {
+    font-weight: bold;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      padding: 0.5rem 0;
+    }
   }
 }
 </style>
