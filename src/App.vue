@@ -1,11 +1,17 @@
 <template>
   <header>
-    <router-link class="link" to="/">Board games helpers app.</router-link>
+    <router-link class="link" to="/">
+      <i class="pi pi-home" />
+      Board games helpers
+    </router-link>
     <div class="spacer" />
-    <router-link class="link" to="/contact">Contact</router-link>
+    <router-link class="link" to="/contact">
+      <i class="pi pi-envelope" />
+      Contact
+    </router-link>
   </header>
   <router-view />
-  <footer>Copyright @2022 | Developed by Anthony Ruelle</footer>
+  <footer>Copyright © 2022 | Développé par Anthony Ruelle</footer>
 </template>
 
 <style lang="scss">
@@ -24,6 +30,9 @@ html {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #f4f4f4;
   height: calc(100vh - #{$header-height} - #{$footer-height});
 
@@ -34,7 +43,7 @@ html {
 
 header {
   height: $header-height;
-  background-color: #232323;
+  background-color: #263238;
   display: flex;
   align-items: center;
 
@@ -46,6 +55,12 @@ header {
     color: $color-white;
     margin: 0 $spacer;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    i {
+      margin: 0 $spacer-small;
+    }
 
     &:hover {
       color: #b3b3b3;

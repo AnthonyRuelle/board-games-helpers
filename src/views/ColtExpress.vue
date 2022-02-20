@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page colt-express-page">
     <h1>Colt express</h1>
     <template v-if="!isAvailableResult">
       <label for="number-player-select">Nombre de joueurs: </label>

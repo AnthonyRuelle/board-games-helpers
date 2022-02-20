@@ -1,5 +1,5 @@
 <template>
-  <h1>Contact</h1>
+  <div class="page contact-page">WIP: Contact page</div>
 </template>
 
 <script lang="ts">
